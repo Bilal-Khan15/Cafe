@@ -317,7 +317,8 @@ const addorder = (user_id, items_id, items_quantity, customize, date, month, yea
                 date, 
                 month, 
                 year,
-                timestamp
+                timestamp,
+                status: 'Active'
             })
             .then((doc)=>{
                 user.db.collection('order').doc(doc.id).set({id: doc.id}, {merge: true})

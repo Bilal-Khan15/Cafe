@@ -1,0 +1,314 @@
+{
+	"info": {
+		"_postman_id": "b5b8f5ce-d41e-4de8-8f3b-32c20c826a48",
+		"name": "Cafe",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/resource/additem",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "name",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "price",
+							"type": "text"
+						},
+						{
+							"key": "ingredients[0]",
+							"value": "ingredients[0]",
+							"type": "text"
+						},
+						{
+							"key": "ingredients[1]",
+							"value": "ingredients[1]",
+							"type": "text"
+						},
+						{
+							"key": "ingredients[2]",
+							"value": "ingredients[2]",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/resource/additem",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"resource",
+						"additem"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/user/signin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "UserName",
+							"value": "UserNamee",
+							"type": "text"
+						},
+						{
+							"key": "Password",
+							"value": "Passworde",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/resource/menu",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/resource/menu",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"resource",
+						"menu"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/resource/addorder",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "user_id",
+							"value": "KAXxEjhl0LiqAFoqiv8d",
+							"type": "text"
+						},
+						{
+							"key": "items_id[0]",
+							"value": "items_id1",
+							"type": "text"
+						},
+						{
+							"key": "items_id[1]",
+							"value": "items_id2",
+							"type": "text"
+						},
+						{
+							"key": "items_quantity[0]",
+							"value": "97",
+							"type": "text"
+						},
+						{
+							"key": "items_quantity[1]",
+							"value": "258",
+							"type": "text"
+						},
+						{
+							"key": "customize[0]",
+							"value": "customizecustomizecustomizecustomizecustomizecustomizecustomizecustomizecustomizecustomizecustomizecustomizecustomizecustomizecustomizecustomizecustomizecustomizecustomizecustomizecustomizecustomizecustomize",
+							"type": "text"
+						},
+						{
+							"key": "customize[1]",
+							"value": "ccustomizeccustomizeccustomize",
+							"type": "text"
+						},
+						{
+							"key": "date",
+							"value": "22",
+							"type": "text"
+						},
+						{
+							"key": "month",
+							"value": "03",
+							"type": "text"
+						},
+						{
+							"key": "year",
+							"value": "2020",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/resource/addorder",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"resource",
+						"addorder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/resource/deleteorder",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "80YZ2m74HasknheAocT9",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/resource/deleteorder",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"resource",
+						"deleteorder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/resource/updateorder",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "80NsmMUBcAZPXqSlcqrk",
+							"type": "text"
+						},
+						{
+							"key": "items_id[0]",
+							"value": "4654sd4s65ad4",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "items_quantity[0]",
+							"value": "54",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "date",
+							"value": "27",
+							"type": "text"
+						},
+						{
+							"key": "month",
+							"value": "04",
+							"type": "text"
+						},
+						{
+							"key": "year",
+							"value": "2020",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/resource/updateorder",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"resource",
+						"updateorder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/resource/deleteitem",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "dSO0svJGTQimGixbvUOi",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/resource/deleteitem",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"resource",
+						"deleteitem"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
