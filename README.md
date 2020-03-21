@@ -1,3 +1,3 @@
-# TEHREER
+# CAFE
 
-Tehreer Backend
+Cafeteria Backend
