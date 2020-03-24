@@ -219,6 +219,19 @@ app.get('/orders', (req, res) => {
     });
 })
 
+app.post('/myorder', (req, res) => {
+    user.db.collection('order').where('user_id', '==', req.body.user_id).get().then(snapshot => {
+        let data = []
+        snapshot.docs.forEach(doc => {
+            data.push(doc.data());
+        });
+
+        res.send({
+            resources: data
+        })
+    });
+})
+
 app.post('/addorder', (req, res) => {
     insert.addorder(req.body.user_id, req.body.items_id, req.body.items_quantity, req.body.customize, req.body.date, req.body.month, req.body.year)
 
