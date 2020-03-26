@@ -1,244 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>The Online Cafeteria</title>
-  <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Indie+Flower|Jim+Nightshade&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Rochester&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/animate.css">
-  <link rel="stylesheet" href="css/owl.carousel.css">
-  <link rel="stylesheet" href="css/owl.theme.default.min.css">
-  <link rel="stylesheet" href="css/magnific-popup.css">
-  <link rel="stylesheet" href="Menu.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Online Cafeteria | Menu</title>
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Indie+Flower|Jim+Nightshade&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rochester&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.grid.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.grid.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.min.css">
+	
+	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+	<link rel="stylesheet" href="http://www.1001fonts.com/text-fonts.html">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="./dev-css/dev-menu.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+    <style>
+        .primary {
+            color: #fff;
+            background-color: #337ab7;
+            border-color: #2e6da4;
+        }
+    </style>
 </head>
-<body>
-     <nav id="nav-menu" class="navbar navbar-default navbar-fixed-top">
-     <div class="container"> 
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-               <li><a href="#features" class="page-scroll">Home</a></li>
-               <li><a href="#menu" class="page-scroll">Our Menu</a></li>
-               <li><a href="./Orders.html" class="page-scroll">Your Orders</a></li>
-               <li><a href="#contact" class="page-scroll">Contact</a></li>
-               <li><a href="./Authentication.html" class="page-scroll">Logout</a></li>
-          </ul>
-          </div>
-     </div>
-     </nav>
-     <!-- Header -->
-     <header id="header">
-     <div class="intro">
-          <div class="overlay">
-          <div class="container">
-               <div class="row">
-                    <div class="intro-text">
-                      <h1>The Online Cafeteria</h1>
+<body style="background-color: rgb(226, 226, 221);height: 100vh; width: 100%;">
+
+    <nav class="navbar navbar-expand-lg navbar-fixed-top">
+        <button class="btn btn-primary checkout" data-target="modal">Checkout</button>
+    </nav>
+    <div class="container">        
+        <div class="modal" id="billModal">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title">Invoice</h3>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
-               </div>
-          </div>
-          </div>
-     </div>
-     </header>
-  <section id="menu" style="background-color: rgb(226, 226, 221);">
-    <div class="container">
-         <div class="row">
-              <div class="col-md-12 col-sm-12">
-                   <div class="section-title">
-                        <h2 id="Menu-title" style="font-weight: bold;">Our Menu</h2>
-                   </div>
-              </div>
-         </div>
-         <div class="row justify-content-center">
-              <div class="col-md-3 col-sm-6">
-                <!-- MENU THUMB -->
-                <div class="menu-thumb">
-                          <img src="images/basiclunch.jpg" class="img-responsive" alt="">
-                          <div class="menu-info">
-                              <div class="menu-item">
-                                    <h3>American Breakfast</h3>
-                                    <p>description</p>
-                              </div>
-                              <div class="menu-price">
-                                    <span>$15.99</span>
-                              </div>
+                    <div class="modal-body">
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th scope="col">#</th>
+                              <th scope="col">Item</th>
+                              <th scope="col">Quantity</th>
+                              <th scope="col">Price</th>
+                              <th scope="col">Total</th>
+                            </tr>
+                          </thead>
+                          <tbody id="render-items">
+                           </tbody>
+                        </table>
+                        <div>
+                            <p style="display: none;" id="create">Order has been Placed.</p>
+                            <button type="button" id="OK" class="btn btn-primary">Confrim Order</button> 
+                            
+                            <input style="float: right;" type="date" name="" id="date">
+                        </div>
+
                     </div>
                 </div>
-             </div>
-
-             <div class="col-md-3 col-sm-6">
-              <!-- MENU THUMB -->
-              <div class="menu-thumb">
-                        <img src="images/rice.jpg" class="img-responsive" alt="">
-                        <div class="menu-info">
-                          <div class="row">
-                            <div class="menu-item col">
-                              <h3>Chicken Fried Rice</h3>
-                              <p>description</p>
-                            </div>
-                            <div class="menu-price col">
-                              <span>$12.99</span>
-                            </div>
-                          </div>    
-                  </div>
-              </div>
-           </div>
-
-            <div class="col-md-3 col-sm-6">
-                    <!-- MENU THUMB -->
-                    <div class="menu-thumb">
-                              <img src="images/burger.jpg" class="img-responsive" alt="">
-                              <div class="menu-info">
-                                  <div class="menu-item">
-                                        <h3>Vegan Burger</h3>
-                                        <p>description</p>
-                                  </div>
-                                  <div class="menu-price">
-                                        <span>$12.99</span>
-                                  </div>
-                              </div>
-                    </div>
             </div>
+        </div>
+    </div>
+    <section id="menu" style="background-color: rgb(226, 226, 221);">
 
-            <div class="col-md-3 col-sm-6">
-                    <!-- MENU THUMB -->
-                    <div class="menu-thumb">
-                              <img src="images/padthainoodles.jpg" class="img-responsive" alt="">
-
-                              <div class="menu-info">
-                                  <div class="menu-item">
-                                        <h3>Pad-Thai Noodles</h3>
-                                        <p>description</p>
-                                  </div>
-                                  <div class="menu-price">
-                                        <span>$17.99</span>
-                                  </div>
-                              </div>
-                    </div>
-             </div>
-         </div>
-         <div class="row justify-content-center">
-              <div class="col-md-3 col-sm-6">
-                   <!-- MENU THUMB -->
-                   <div class="menu-thumb">
-                             <img src="images/pasta.jpg" class="img-responsive" alt="">
-                             <div class="menu-info">
-                                  <div class="menu-item">
-                                       <h3>Gourmet Pasta</h3>
-                                       <p>description</p>
-                                  </div>
-                                  <div class="menu-price">
-                                       <span>$18.99</span>
-                                  </div>
-                             </div>
-                   </div>
-              </div>
-
-              <div class="col-md-3 col-sm-6">
-                <!-- MENU THUMB -->
-                <div class="menu-thumb">
-                          <img src="images/burrito.jpg" class="img-responsive" alt="">
-                          <div class="menu-info">
-                               <div class="menu-item">
-                                    <h3>3-Bean Burrito</h3>
-                                    <p>description</p>
-                               </div>
-                               <div class="menu-price">
-                                    <span>$7.99</span>
-                               </div>
-                          </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                     <div class="section-title">
+                          <h2 id="Menu-title" style="font-weight: bold;">Our Menu</h2>
+                     </div>
                 </div>
            </div>
-
-              <div class="col-md-3 col-sm-6">
-                   <!-- MENU THUMB -->
-                   <div class="menu-thumb">
-                             <img src="images/pizza.jpg" class="img-responsive" alt="">
-                             <div class="menu-info">
-                                  <div class="menu-item">
-                                       <h3>DIY Pizza (Small)</h3>
-                                       <p>description</p>
-                                  </div>
-                                  <div class="menu-price">
-                                       <span>12.99</span>
-                                  </div>
-                             </div>
-                   </div>
-              </div>
-
-              <div class="col-md-3 col-sm-6">
-                   <!-- MENU THUMB -->
-                   <div class="menu-thumb">
-                             <img src="images/salad.jpg" class="img-responsive" alt="">
-
-                             <div class="menu-info">
-                                  <div class="menu-item">
-                                       <h3>DIY Salad</h3>
-                                       <p>description</p>
-                                  </div>
-                                  <div class="menu-price">
-                                       <span>$11.99</span>
-                                  </div>
-                             </div>
-                   </div>
-              </div>
-         </div>
-    </div>
-  </section>
-
-  <section id="contact" style="background-color: rgb(242, 245, 242);">
-    <div class="container">
-         <div class="row">
-              <div class="col-md-6 col-sm-12">
-                <div id="google-map">
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.5272181586406!2d-79.38100111311213!3d43.65800389031002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb35645cd477%3A0x75bedc0285369c1d!2sRyerson%20Students&#39;%20Union!5e0!3m2!1sen!2sca!4v1581124188780!5m2!1sen!2sca" width="550" height="395" allowfullscreen=""></iframe>                </div>
-              </div> 
-              <div class="col-md-6 col-sm-12">
-                   <div class="col-md-12 col-sm-12">
-                        <div class="section-title-contact wow fadeInUp" data-wow-delay="0.1s">
-                             <h2 style="font-weight: bold;">Contact Us</h2>
+            <div class="row" id="renderMenu">
+                <!-- <div class="row" id="">
+                    <div class="col-md-6 col-lg-4">
+					<div class="card">
+						<div class="card-body">
+                            <h3>Vegan Burger</h3>
+							<h4>$60.00</h4>
+                            <h5>Ingredients</h5>
+                            <ul>
+                                <li>Onion</li>
+                                <li>Jalapenos</li>
+                                <li>Ketchup</li>
+                            </ul>
+                            <textarea class="form-control" placeholder="e.g: mayo, ketchup etc" id="customize" cols="30" rows="2"></textarea>
                         </div>
-                   </div>
-                   <!-- CONTACT FORM -->
-                   <form action="#" method="post" class="wow fadeInUp" id="contact-form" role="form" data-wow-delay="0.8s">
+                        <div class="card-footer" style="display: inline-block;background-color: #ffffff;">
 
-                        <!-- IF MAIL SENT SUCCESSFUL  // connect this with custom JS -->
-                        <h6 class="text-success">Your message has been sent successfully.</h6>
-                        
-                        <!-- IF MAIL NOT SENT -->
-                        <h6 class="text-danger">E-mail must be valid and message must be longer than 1 character.</h6>
-
-                        <div class="col-md-6 col-sm-6">
-                             <input type="text" class="form-control" id="cf-name" name="name" placeholder="Full name">
+                            <div class="row">
+                                
+                                <div class="col-lg-6">
+                                    <button class="btn btn-primary"><i class="fa fa-cart-plus" aria-hidden="true"></i>Add To Cart</button>
+                                </div>
+                                <div class="col-lg-2"></div>
+                                <div class="col-lg-4 col-md-6 mt-3" style="display: block;">
+                                    <a class="primary" style="cursor:pointer; color: white;padding: 5px 8px 5px 8px;border-radius: 15px;"><i class="fa fa-plus"></i></a>
+                                    <a style="padding-left: 5px;padding-right: 5px;">1</a>
+                                    <a class="primary" style="cursor:pointer;color: white;padding: 5px 8px 5px 8px;border-radius: 15px;"><i class="fa fa-minus"></i></a>    
+                                </div>
+                            </div>
                         </div>
+					</div>
+                </div>-->
 
-                        <div class="col-md-6 col-sm-6">
-                             <input type="email" class="form-control" id="cf-email" name="email" placeholder="Email address">
-                        </div>
+            </div>
+        </div>
+    </section>       
 
-                        <div class="col-md-12 col-sm-12">
-                             <input type="text" class="form-control" id="cf-subject" name="subject" placeholder="Subject">
-
-                             <textarea class="form-control" rows="6" id="cf-message" name="message" placeholder="Issues and Concerns"></textarea>
-
-                             <button type="submit" class="form-control" id="cf-submit" name="submit">Send Message</button>
-                        </div>
-                   </form>
-              </div>
-
-         </div>
-    </div>
-  </section>       
-
+    
   <script src="js/jquery.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/jquery.stellar.min.js"></script>
   <script src="js/wow.min.js"></script>
   <script src="js/owl.carousel.min.js"></script>
   <script src="js/jquery.magnific-popup.min.js"></script>
+
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+
+
+  <script src="./dev-js/menu.js"></script>
 </body>
 </html>

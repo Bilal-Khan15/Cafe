@@ -1,0 +1,44 @@
+Unzip this project
+
+Open Terminal
+
+run "npm install"
+
+then run "node app.js"
+
+Open "Authentication.html" in Frontend folder
+
+I HOPE YOU LIKE IT !!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DIY salad    $11.99
+ceaser dressing 
+kale
+lettuce
+
+
+
+
+

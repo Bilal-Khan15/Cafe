@@ -36,9 +36,15 @@ app.post('/signin', async (req, res) => {
             data.push(doc.data());
         });
         
-        res.send({
-            resources: data
-        })
+        if(data == []){
+            res.send({
+                resources: "UserName or Password incorrect !"
+            })
+        }else{
+            res.status(500).send({
+                resources: data
+            })
+        }
     });
 })
 
